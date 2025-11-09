@@ -20,7 +20,17 @@ export default function AllSkills() {
 
   useEffect(() => {
     const handleResize = () => {
-      setRadius(Math.min(window.innerWidth / 4, 200));
+      // Adjust radius based on screen size
+      const isMobile = window.innerWidth < 640;
+      const isTablet = window.innerWidth >= 640 && window.innerWidth < 1024;
+      
+      if (isMobile) {
+        setRadius(Math.min(window.innerWidth / 3.5, 120));
+      } else if (isTablet) {
+        setRadius(Math.min(window.innerWidth / 4.5, 160));
+      } else {
+        setRadius(Math.min(window.innerWidth / 4, 200));
+      }
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -40,16 +50,17 @@ export default function AllSkills() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center text-white relative mt-10 mb-20">
-      <h1 className="text-4xl font-bold mb-10 z-10">All Skills</h1>
+    <div className="flex flex-col items-center text-white relative mt-6 sm:mt-8 md:mt-10 mb-12 sm:mb-16 md:mb-20 px-2">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-10 z-10">All Skills</h1>
 
       <div
         ref={containerRef}
         className="relative"
         style={{
           // make the container square and centered around the circle
-          width: radius * 2 + 200,
-          height: radius * 2 + 200,
+          width: radius * 2 + 120,
+          height: radius * 2 + 120,
+          maxWidth: '100%',
         }}
       >
         {/* Render a full ring: use actual skills for the first N slots, then placeholders
@@ -107,20 +118,23 @@ export default function AllSkills() {
                     <StackIcon
                       name={slotSkill.icon}
                       style={{
-                        width: "50px",
-                        height: "50px",
+                        width: window.innerWidth < 640 ? "35px" : "50px",
+                        height: window.innerWidth < 640 ? "35px" : "50px",
                         filter: "drop-shadow(0px 0px 6px rgba(255,255,255,0.5))",
                       }}
                     />
                   ) : (
-                    <img src="/springBoot.png" alt="springboot" style={{ width: "50px", height: "50px" }} />
+                    <img src="/springBoot.png" alt="springboot" style={{ 
+                      width: window.innerWidth < 640 ? "35px" : "50px", 
+                      height: window.innerWidth < 640 ? "35px" : "50px" 
+                    }} />
                   )
                 ) : (
                   // Placeholder small dot to visually complete the ring
                   <div
                     style={{
-                      width: 10,
-                      height: 10,
+                      width: window.innerWidth < 640 ? 6 : 10,
+                      height: window.innerWidth < 640 ? 6 : 10,
                       borderRadius: '50%',
                       background: 'rgba(255,255,255,0.22)',
                       boxShadow: '0 0 6px rgba(255,255,255,0.06)',
@@ -140,8 +154,8 @@ export default function AllSkills() {
             top: "50%",
             transform: "translate(-50%, -50%)",
             zIndex: 2,
-            width: "400px",
-            height: "400px",
+            width: window.innerWidth < 640 ? "200px" : window.innerWidth < 1024 ? "300px" : "400px",
+            height: window.innerWidth < 640 ? "200px" : window.innerWidth < 1024 ? "300px" : "400px",
             pointerEvents: 'none', // allow clicks to pass to icons if needed
           }}
         >

@@ -25,8 +25,8 @@ export default function Projects() {
     };
   }, []);
   return (
-    <div>
-        <div className="flex flex-col justify-center items-center m-2 p-2 rounded-md  text-white text-3xl font-bold">
+    <div className="w-full px-2 sm:px-4">
+        <div className="flex flex-col justify-center items-center m-2 p-2 rounded-md text-white text-2xl sm:text-3xl font-bold">
         <h1>Projects</h1>
         <br />
         <br />
@@ -39,11 +39,11 @@ export default function Projects() {
         position: 'relative',
         zIndex: 1,
       }}
-    className="flex flex-row justify-center items-center m-2 p-2 rounded-md  text-white">
+    className="flex flex-col md:flex-row flex-wrap justify-center items-center m-2 p-2 rounded-md text-white gap-4">
         
       {
-        projects.projects.map((project) => (
-          <div className="flex flex-col justify-center items-center m-2 p-2 rounded-md  text-white">
+        projects.projects.map((project, index) => (
+          <div key={index} className="flex flex-col justify-center items-center m-2 p-2 rounded-md text-white w-full sm:w-auto">
             <SkillsCard title={project.title} description={project.description} icon={project.icon} link={project.link} game={project.game}/>
            
          

@@ -38,13 +38,13 @@ const SkillsCard = (props) => {
       initial={{ opacity: 0, scale: 1, rotate: 0 }}
       animate={controls}
       whileHover={{ scale: 1.05 }}
-      className="w-[300px] p-6 rounded-xl cursor-pointer 
+      className="w-full sm:w-[280px] md:w-[300px] p-4 sm:p-6 rounded-xl cursor-pointer 
                  bg-black/40 backdrop-blur-lg border border-white/10 shadow-lg 
                  transition-all duration-300 hover:border-yellow-400 hover:shadow-yellow-400/30"
     >
       <div className="flex flex-col justify-center items-center gap-3 text-center">
-        <h2 className="text-2xl font-bold text-yellow-300">{props.title}</h2>
-        <p className="text-gray-200 text-sm">{props.description}</p>
+        <h2 className="text-xl sm:text-2xl font-bold text-yellow-300">{props.title}</h2>
+        <p className="text-gray-200 text-xs sm:text-sm">{props.description}</p>
 
        
 
@@ -57,8 +57,8 @@ const SkillsCard = (props) => {
             }}
             className="hover:scale-110 transition-transform"
           >
-            <StackIcon name="github" style={{ width: "50px", height: "50px",  filter:
-            "drop-shadow(0px 0px 6px rgba(255,255,255,0.8)) brightness(1.2)", }} />
+            <StackIcon name="github" style={{ width: "40px", height: "40px",  filter:
+            "drop-shadow(0px 0px 6px rgba(255,255,255,0.8)) brightness(1.2)", }} className="sm:w-[50px] sm:h-[50px]" />
           </div>
         )}
 

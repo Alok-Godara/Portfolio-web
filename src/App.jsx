@@ -13,7 +13,7 @@ const App = () => {
   const allSkillsRef = useRef(null);
   const experiencesRef = useRef(null);
   return (
-    <div className="flex flex-col justify-start items-center  gap-10 max-w-full overflow-x-hidden">
+    <div className="flex flex-col justify-start items-center gap-6 sm:gap-8 md:gap-10 max-w-full overflow-x-hidden">
       <div className="-z-20 relative">
         <ParticleBackground />
       </div>
@@ -27,9 +27,9 @@ const App = () => {
         />
       </div>
 
-      <div className="w-full " ref={aboutRef} style={{ scrollMarginTop: 'var(--nav-height, 100px)' }}>
+      <div className="w-full px-2 sm:px-4" ref={aboutRef} style={{ scrollMarginTop: 'var(--nav-height, 100px)' }}>
         <About />
-        <div className="flex flex-wrap justify-center items-center gap-5 w-full px-4">
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-5 w-full px-2 sm:px-4">
           <Skills />
         </div>
         <div ref={allSkillsRef} style={{ scrollMarginTop: 'var(--nav-height, 100px)' }}>
@@ -44,10 +44,11 @@ const App = () => {
             alignItems: "center",
             justifyContent: "center",
             paddingTop: "0px",
-            paddingBottom: "210px", 
+            paddingBottom: "150px", 
             boxSizing: "border-box",
             width: "100%",
           }}
+          className="pb-24 sm:pb-32 md:pb-52"
         >
           <Projects />
         </div>

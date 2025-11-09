@@ -34,9 +34,9 @@ export default function Skills() {
         position: 'relative',
         zIndex: 1,
       }}
-    className="flex flex-col justify-center items-center m-2 p-2 rounded-md  text-white">
-      <h1 className="text-4xl font-bold mb-4">Skills</h1>
-      <div className="flex flex-row gap-10 flex-wrap justify-center items-center">
+    className="flex flex-col justify-center items-center m-2 p-2 rounded-md text-white w-full">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Skills</h1>
+      <div className="flex flex-row gap-4 sm:gap-6 md:gap-10 flex-wrap justify-center items-center px-2">
         {skills.skills.map((skill) => (
           <SkillsCard
             key={skill.title}

@@ -148,29 +148,38 @@ const Navbar = ({ aboutRef, projectsRef, allSkillsRef, experiencesRef }) => {
           zIndex: 50,
         }}
       >
-        <ul className="flex w-screen flex-row justify-around items-center">
-          <Example />
+        <ul className="flex w-screen flex-row justify-around items-center px-2 md:px-4">
+          {/* Lottie Animation - Hidden on mobile */}
+          <div className="hidden md:block">
+            <Example />
+          </div>
+          
+          {/* Navigation items - Responsive text size */}
           <motion.li
             whileHover={{ scale: 1.35, cursor: "pointer" }}
             onClick={() => scrollToSection(aboutRef)}
+            className="text-xs sm:text-sm md:text-base"
           >
             About
           </motion.li>
           <motion.li
             whileHover={{ scale: 1.35, cursor: "pointer" }}
             onClick={() => scrollToSection(allSkillsRef)}
+            className="text-xs sm:text-sm md:text-base hidden sm:block"
           >
             All skills
           </motion.li>
           <motion.li
             whileHover={{ scale: 1.35, cursor: "pointer" }}
             onClick={() => scrollToSection(projectsRef)}
+            className="text-xs sm:text-sm md:text-base"
           >
             Projects
           </motion.li>
           <motion.li
             whileHover={{ scale: 1.35, cursor: "pointer" }}
             onClick={() => scrollToSection(experiencesRef)}
+            className="text-xs sm:text-sm md:text-base hidden sm:block"
           >
             Experiences
           </motion.li>
@@ -193,7 +202,7 @@ const Navbar = ({ aboutRef, projectsRef, allSkillsRef, experiencesRef }) => {
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
           transition={{ type: "tween", duration: 0.3 }}
-          className="fixed top-0 right-0 h-full w-84 bg-gray-900 text-white z-50 p-6 shadow-2xl rounded-l-2xl flex flex-col"
+          className="fixed top-0 right-0 h-full w-full sm:w-96 md:w-84 bg-gray-900 text-white z-50 p-4 sm:p-6 shadow-2xl sm:rounded-l-2xl flex flex-col"
         >
           {/* Close button */}
           <button
@@ -203,11 +212,11 @@ const Navbar = ({ aboutRef, projectsRef, allSkillsRef, experiencesRef }) => {
             <X size={24} />
           </button>
 
-          <h2 className="text-2xl font-bold mb-6 text-yellow-400">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-yellow-400">
             Connect with Me
           </h2>
 
-          <ul className="space-y-6 text-lg">
+          <ul className="space-y-4 sm:space-y-6 text-base sm:text-lg">
             <li>
               <a
                 href="https://github.com/alok-godara"
@@ -239,7 +248,7 @@ const Navbar = ({ aboutRef, projectsRef, allSkillsRef, experiencesRef }) => {
              <li>
         <a
           href="mailto:aakarshkt2002@gmail.com"
-          className="flex items-center gap-3 hover:text-yellow-400 transition"
+          className="flex items-center gap-3 hover:text-yellow-400 transition break-all"
         >
           <Mail size={20} /> alokgodara.official@gmail.com
         </a>
