@@ -1,0 +1,22 @@
+{ 
+  "allSkills": [
+    {"icon": "python"},
+    {"icon": "js"},
+    {"icon": "typescript"},
+    {"icon": "c"},
+    {"icon": "reactjs"},
+    {"icon": "reactnative"},
+    {"icon": "nextjs2"},
+    {"icon": "fastapi"},
+    {"icon": "flask"},
+    {"icon": "supabase"},
+    {"icon": "firebase"},
+    {"icon": "appwrite"},
+    {"icon": "mysql"},
+    {"icon": "mongodb"},
+    {"icon": "git"},
+    {"icon": "github"},
+    {"icon": "gcloud"},
+    {"icon": "tailwindcss"} 
+  ]
+}

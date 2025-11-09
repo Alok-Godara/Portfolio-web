@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "title": "FinSync — Expense Tracker",
+      "description": "A full-stack real-time expense tracking platform built using React, Supabase, and TailwindCSS with features like company creation, shared expenses, and reimbursements.",
+      "link": "https://github.com/Alok-Godara/MapMyMoney",
+      "icon": "github"
+    },
+    {
+      "title": "HealthBuddy — Digital EHR Platform",
+      "description": "A cross-platform EHR system built using Supabase, React, and React Native with real-time patient data sharing and secure access control using Row-Level Security.",
+      "link": "https://github.com/Alok-Godara/HealthBuddy-Web",
+      "icon": "github"
+    },
+    {
+      "title": "PrepBuddy — AI Teaching Assistant",
+      "description": "An AI-powered web platform using Flask, LangChain, and multiple LLMs to generate summaries and quiz questions from uploaded study material or YouTube links.",
+      "link": "https://github.com/Alok-Godara/AI-teaching-assistant",
+      "icon": "github"
+    }
+  ]
+}

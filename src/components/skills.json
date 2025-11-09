@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "title": "Python",
+      "description": "Proficient in Python for backend development, AI/ML workflows, and automation.",
+      "icon": "python"
+    },
+    {
+      "title": "React",
+      "description": "Skilled in building responsive and interactive UIs using React.js for web and mobile apps.",
+      "icon": "reactjs"
+    },
+    {
+      "title": "React Native",
+      "description": "Developed cross-platform mobile apps using React Native with real-time data handling.",
+      "icon": "reactnative"
+    },
+    {
+      "title": "Next.js",
+      "description": "Experienced in server-side rendering and building modern full-stack apps using Next.js.",
+      "icon": "nextjs"
+    },
+        {
+      "title": "JS & TS",
+      "description": "Experienced in JavaScript and TypeScript for building dynamic and scalable web applications.",
+      "icon": "js"
+    },
+        {
+      "title": "FastAPI",
+      "description": "Developed high-performance APIs with FastAPI and integrated them with cloud-native services.",
+      "icon": "fastapi"
+    }
+  ]
+}
