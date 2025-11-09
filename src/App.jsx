@@ -5,13 +5,23 @@ import About from "./components/about.jsx";
 import AllSkills from "./components/allSkills.jsx";
 import Projects from "./components/projects.jsx";
 import Experiences from "./components/experiencesNew.jsx";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const App = () => {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const allSkillsRef = useRef(null);
   const experiencesRef = useRef(null);
+
+  useEffect(() => {
+    // Check if device is mobile
+    const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isSmallScreen = window.innerWidth < 768;
+    
+    if (isMobile || isSmallScreen) {
+      alert("For the best experience, please open this website on a PC or desktop computer.");
+    }
+  }, []);
   return (
     <div className="flex flex-col justify-start items-center gap-6 sm:gap-8 md:gap-10 max-w-full overflow-x-hidden">
       <div className="-z-20 relative">
