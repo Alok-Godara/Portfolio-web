@@ -1,22 +1,30 @@
-{ 
-  "allSkills": [
-    {"icon": "python"},
-    {"icon": "js"},
-    {"icon": "typescript"},
-    {"icon": "c"},
-    {"icon": "reactjs"},
-    {"icon": "reactnative"},
-    {"icon": "nextjs2"},
-    {"icon": "fastapi"},
-    {"icon": "flask"},
-    {"icon": "supabase"},
-    {"icon": "firebase"},
-    {"icon": "appwrite"},
-    {"icon": "mysql"},
-    {"icon": "mongodb"},
-    {"icon": "git"},
-    {"icon": "github"},
-    {"icon": "gcloud"},
-    {"icon": "tailwindcss"} 
+ { 
+    "allSkills" : [
+    {"icon":"html5"},
+    {"icon":"css3"},
+    {"icon":"js"},
+    {"icon":"java"},
+    {"icon":"springboot"},
+    {"icon":"reactjs"},
+    {"icon":"threejs"},
+    {"icon":"nodejs"},
+    {"icon":"mysql"},
+    {"icon":"postgresql"},
+    {"icon":"firebase"},
+    {"icon":"aws"},
+    {"icon":"netlify"},
+    {"icon":"github"},
+    {"icon":"docker"},
+    {"icon":"nextjs2"},
+    {"icon":"c++"},
+    {"icon":"java"},
+    {"icon":"python"},
+    {"icon":"tailwindcss"},
+    {"icon":"figma"},
+    {"icon":"framer"},
+    {"icon":"ec2"},
+    {"icon":"git"}
+
+
   ]
 }
